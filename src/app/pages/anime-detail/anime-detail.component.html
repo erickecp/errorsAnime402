@@ -1,0 +1,45 @@
+<div class="container-fluid">
+  <div class="row">
+    <div
+      class="col-4 p-2"
+    >
+    <img class="cardAnime img-fluid" [src]="anime?.images?.jpg?.large_image_url" alt="">
+  </div>
+  <div
+  class="col-8"
+  >
+  <h5 class="text-center text-light mt-2">{{anime.title}}</h5>
+  <p class="text-light text-center">{{anime.title_japanese}}</p>
+  <div>
+    <p class="text-light sy-anime">{{anime.synopsis}}</p>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-10">
+        @for (gen of anime.genres; track $index) {
+          <span
+          class="badge rounded-pill text-bg-warning ms-2"
+          >{{gen.name}}</span
+        >
+        }
+      </div>
+      <div class="col-2 text-end">
+        <span
+          class="badge bg-warning"
+          >
+          <i class="fa fa-star" aria-hidden="true"></i>
+          {{anime.score}}
+          </span
+        >
+
+      </div>
+  </div>
+
+
+
+
+
+
+
+</div>
